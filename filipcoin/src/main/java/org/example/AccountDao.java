@@ -28,4 +28,7 @@ public interface AccountDao {
     @SqlQuery("SELECT * FROM accounts WHERE id = :id")
     @RegisterBeanMapper(account.class)  // Note: Class names should follow Java naming conventions
     String[] getAccountByIdToo(int id);
+
+    @SqlUpdate("UPDATE accounts SET balance = balance + :amount WHERE id = :id")
+    void changeBalance(int id, int amount);
 }
