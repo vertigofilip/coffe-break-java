@@ -11,7 +11,7 @@ public interface AccountDao {
     void createTable();
 
     @SqlUpdate("INSERT INTO accounts (n_id, n_name, n_balance, n_active) VALUES (:id, :name, ;balance, :active)")
-    void insertUser(int id, String name, int balance, int active);
+    void insertUser(int id, String name, int balance, boolean active);
 
     @SqlQuery("SELECT * FROM accounts")
     @RegisterBeanMapper(account.class)

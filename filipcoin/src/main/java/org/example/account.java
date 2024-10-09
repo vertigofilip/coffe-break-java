@@ -14,6 +14,7 @@ public class account {
         name = n_name;
         balance = n_balance;
         active = n_active;
+        accountDto.insertUser(id, name, balance, active);
     }
     public account(int n_id, String n_name, int n_balance, boolean n_active) {//for outside imprt mechanism
         this.accountDto = accountDto;
