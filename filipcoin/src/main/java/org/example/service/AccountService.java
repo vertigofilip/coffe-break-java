@@ -1,4 +1,4 @@
-package org.example;
+package org.example.service;
 
 import org.example.AccountDao;
 import org.example.account;
